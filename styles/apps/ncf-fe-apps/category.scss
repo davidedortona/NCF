@@ -1,0 +1,221 @@
+/*.background-category{
+    background-color: #f8fafc;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.category-item{
+    margin-top:15px;
+    width: 100%;
+    //height: 300px;
+    margin-left: 2%;
+    margin-right: 14%;
+    background-color: #F8FAFC;
+    align-items: center;
+    justify-content: center;
+
+    &-wrapper{
+        background-color:#ffffff;
+        border: 1px solid #707070;
+        border-radius: 15px;
+        display: -webkit-inline-box;
+        align-items: center;
+        justify-content: center;
+        //flex-direction: column;
+       // min-height: 250px;
+        //margin-top: 85px;
+        width:100%;
+        overflow: hidden;
+        margin-left: 0;
+      
+
+        .immagine{
+            width: 300px;
+            height: 300px;
+            
+            border-radius: 15px;
+        }
+
+        .button_l {
+            width: 200px;
+            height: 40px;
+            background-color: #A37777;
+         
+            color: white;
+            border: 0;
+            border-radius: 15px;
+            margin: 30px 0 20px 50px;
+            position: relative;
+            
+            padding: 8px 32px 8px 32px;
+            
+            //left:10%;
+            
+            
+
+            &:enabled:hover {
+                background-color: #DBABAB;
+                color: #FFFFFF;
+                border:0;
+            }
+            
+        }
+
+        .text_container{
+            max-width:100%;
+            flex-direction: column;
+            display: flex;
+            float: center;
+            align-items: center;
+        }
+
+        
+        .name{
+            margin: 30px 0 0 50px;
+            align-items: center;
+        }
+    
+        .description{
+            
+            margin: 30px 30px 0 50px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            
+            
+        }
+    }
+
+    
+
+   
+} */
+
+
+
+    
+
+.categorybanner{
+    
+    height: 935px;
+    width: 100%;
+    background-color: black;
+    position: relative;
+  
+    //margin-bottom:8px;
+    overflow: hidden;
+    
+    
+
+    &-text {
+        
+        color: white;
+        margin-top: 150px;
+        position: absolute;
+        z-index: 10;
+        width:100%;
+
+        h1{
+            
+            font-size: 8rem;
+            font-weight: 200;
+            
+
+            
+
+        }
+
+        h2{
+            margin-top:50px;;
+            font-size: 1.5em;
+            font-weight: 300;
+            position: absolute;
+            max-width: 40%;
+            
+
+
+        }
+    }
+
+
+    
+    img {
+        overflow:hidden;
+        width:100%;
+        height:100%;
+        filter: brightness(45%);
+        object-fit: cover;
+        z-index:2;
+        //max-height:955px;
+        
+    }
+
+  /*  &-image {
+        padding: 15px 50px 0 0;
+        //text-align: center;
+
+        img {
+            width: 100%;
+        }
+    } */
+
+    &-button {
+        background-color: transparent;
+        //background-color: rgba(0, 0, 0, 0.5);
+        color: #FFFFFF;
+        text-transform: uppercase;
+        border:0;
+        //border-radius: 50%;
+        height: 80px;
+        display:inline-block;
+        position: absolute;
+        left:80%;
+        bottom:10%;
+        opacity: 50%;
+        width: 250px;
+        height: 90px;
+        z-index:10;
+        transition: all ease-in-out 0.4s;
+        border:none;
+        &:enabled:hover {
+            //background-color: #FFFFFF;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #FFFFFF;
+            border:none;
+            //opacity: 100%;
+           outline: 0;
+        }
+
+        &:enabled:focus,&:enabled:active {
+            //background-color: #FFFFFF;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #FFFFFF;
+            opacity: 100%;
+            outline: none;
+            border: none;
+        } 
+
+
+
+       
+
+      /*  &:enabled:active {
+            background-color: #FFFFFF;
+            color: #00c9e0;
+            border:0;
+            opacity: 100%;
+        
+        }
+         
+        */
+
+        
+        
+    } 
+}
+
+
+

@@ -1,0 +1,54 @@
+<p-toast></p-toast>
+<div class="admin-page">
+    <p-card [header]="editMode ? 'Modifica Categoria': 'Aggiungi categoria'" subheader="Puoi aggiungere o modificare le categorie qui">
+        <div class="grid mb-5">
+            <div class="col-12">
+                <p-toolbar>
+                    <div class="p-toolbar-group-left"></div>
+                    <div class="p-toolbar-group-right">
+                        <p-button
+                            styleClass="p-button-primary mr-4"
+                            label="Crea"
+                            icon="pi pi-plus"
+                            (click)="onSubmit()"></p-button>
+
+                        <p-button
+                            styleClass="p-button-secondary"
+                            label="Annulla"
+                            (click)="back()"></p-button>
+                    </div>
+                </p-toolbar>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="col-12">
+                <form [formGroup]="form">
+                    <div class="p-fluid p-formgrid grid">
+                        <div class="p-field col-4">
+                            <label for="name">Titolo</label>
+                            <input formControlName="name" id="name" type="text" pInputText />
+                            <small *ngIf="categoryForm['name'].invalid && isSubmitted" class="p-error">Titolo obbligatorio</small>
+                        </div>
+                        <div class="p-field col-12">
+                            <label for="description">Descrizione</label>
+                            <p-editor formControlName="description" [style]="{'height':'320px'}"></p-editor>
+                            <small *ngIf="categoryForm['description'].invalid && isSubmitted" class="p-error">Descrizione obbligatoria</small>
+                        </div>
+
+                        <div class="p-field col-12">
+                            <label for="name">Immagine Categoria</label>
+                            <input type="file" class="p-inputtext" accept="image/*" (change)="onImageUpload($event)"/>
+                            <div class="col-2 mt-2 pl-0" style="width: 600px; height: auto; object-fit: contain;">
+                                <img style="width:100%;" [src]="imageDisplay" alt="">
+                            </div>
+                             <!-- small *ngIf="categoryForm['image'].invalid && isSubmitted" class="p-error">L'immagine è obbligatoria</small -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+         </div>
+
+
+    </p-card>
+</div>

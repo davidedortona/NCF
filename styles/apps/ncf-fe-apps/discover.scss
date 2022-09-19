@@ -1,0 +1,199 @@
+.background{
+    background-color: #f8fafc;
+    
+}
+
+
+
+.discover-item{
+    margin-top:30px;
+    max-width: 90%;
+    //height: 300px;
+    margin-left: 7%;
+    margin-right: 8%;
+    background-color: #F8FAFC;
+    margin-bottom: 50px;
+    &-wrapper_right{
+       /* background-color: #FFFFFF;
+        border: 1px solid #707070;
+        border-radius: 15px;
+        display: -webkit-inline-box;
+        align-items: right;
+        justify-content: right;
+        //flex-direction: column;
+       // min-height: 250px;
+        margin-top: 85px;
+        width:80%;
+        margin-left:20%; */
+        background-color:#ffffff;
+        border: 1px solid #707070;
+        border-radius: 15px;
+        display: -webkit-inline-box;
+        align-items: left;
+        justify-content: left;
+        //flex-direction: column;
+       // min-height: 250px;
+        //margin-top: 85px;
+        max-width:70%;
+        margin-left:35%;
+        overflow: hidden;
+
+        .immagine{
+            width: 300px;
+            height: 300px;
+            //align-items: right;
+            border-radius: 15px;
+        }
+
+        .button {
+            width: 200px;
+            height: 40px;
+            background-color: #A37777;
+            text-align:left;
+            color: white;
+            border: 0;
+            border-radius: 15px;
+            margin: 30px 0 0 50px;
+            position:relative;
+            float: left;
+
+            //margin-left: 0
+            
+
+            &:enabled:hover {
+                background-color: #DBABAB;
+                color: #FFFFFF;
+                border:0;
+            }
+
+            
+        }
+
+
+        .text_container{
+            max-width: 70%;
+            flex-direction: column;
+            display: flex;
+        }
+
+        
+        .name{
+            margin-top: 30px;
+            margin-left: 65%;
+            
+        }
+    
+        .description{
+            
+            margin-top:15px;
+            margin-right:7%;
+            margin-left:7%;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            
+            
+        }
+
+      /*  .text_container{
+            width:75.6%;
+            flex-direction: column;
+            display: flex;
+            justify-content: right;
+
+           
+        }
+
+        .name{
+            margin: 30px 0 0 720px;
+            justify-content: right;
+            
+        }
+
+        .description{
+        
+            margin: 30px 0 0 50px;
+            
+            
+        }*/
+
+        
+        
+    
+        
+    }
+
+
+    &-wrapper{
+        background-color:#ffffff;
+        border: 1px solid #707070;
+        border-radius: 15px;
+        display: -webkit-inline-box;
+        align-items: left;
+        justify-content: left;
+        //flex-direction: column;
+       // min-height: 250px;
+        //margin-top: 85px;
+        max-width:70%;
+        overflow: hidden;
+      
+
+        .immagine{
+            width: 300px;
+            height: 300px;
+            
+            border-radius: 15px;
+        }
+
+        .button_l {
+            width: 200px;
+            height: 40px;
+            background-color: #A37777;
+            text-align:left;
+            color: white;
+            border: 0;
+            border-radius: 15px;
+            margin: 30px 0 0 50px;
+            position: relative;
+            float:right;
+            //left:10%;
+            
+            
+
+            &:enabled:hover {
+                background-color: #DBABAB;
+                color: #FFFFFF;
+                border:0;
+            }
+            
+        }
+
+        .text_container{
+            max-width:66%;
+            flex-direction: column;
+            display: flex;
+        }
+
+        
+        .name{
+            margin: 30px 0 0 50px;
+            align-items: center;
+        }
+    
+        .description{
+            
+            margin: 30px 0 0 50px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            
+            
+        }
+    }
+
+    
+
+   
+}

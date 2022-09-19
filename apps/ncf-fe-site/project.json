@@ -1,0 +1,99 @@
+{
+  "projectType": "application",
+  "sourceRoot": "apps/ncf-fe-site/src",
+  "prefix": "ncf",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/ncf-fe-site",
+        "index": "apps/ncf-fe-site/src/index.html",
+        "main": "apps/ncf-fe-site/src/main.ts",
+        "polyfills": "apps/ncf-fe-site/src/polyfills.ts",
+        "tsConfig": "apps/ncf-fe-site/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/ncf-fe-site/src/favicon.ico",
+          "apps/ncf-fe-site/src/assets"
+        ],
+        "styles": [
+          "apps/ncf-fe-site/src/styles.scss"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "4000kb",
+              "maximumError": "5mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/ncf-fe-site/src/environments/environment.ts",
+              "with": "apps/ncf-fe-site/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "ncf-fe-site:build:production"
+        },
+        "development": {
+          "browserTarget": "ncf-fe-site:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "ncf-fe-site:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/ncf-fe-site/**/*.ts",
+          "apps/ncf-fe-site/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/ncf-fe-site"
+      ],
+      "options": {
+        "jestConfig": "apps/ncf-fe-site/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

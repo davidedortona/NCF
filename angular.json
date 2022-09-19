@@ -1,0 +1,19 @@
+{
+    "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+    "version": 2,
+    "projects": {
+        "admin": "apps/admin",
+        "admin-e2e": "apps/admin-e2e",
+        "models": "libs/models",
+        "ncf-fe-site": "apps/ncf-fe-site",
+        "ncf-fe-site-e2e": "apps/ncf-fe-site-e2e",
+        "services": "libs/services"
+    },
+    "budgets": [
+        {
+           "type": "initial",
+           "maximumWarning": "4mb",
+           "maximumError": "5mb"
+        }
+     ]
+}

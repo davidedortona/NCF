@@ -1,0 +1,22 @@
+.nav {
+    padding-top:12px;
+   // margin-right: -40px;
+    li {
+        list-style: none;
+        display: inline-block;
+        margin-right:30px;
+        
+
+    
+
+    a {
+        letter-spacing: 2px;
+        font-size:20px;
+        color: black;
+        cursor:pointer;
+        &:hover {
+            color: #A37777;
+        }
+    }
+}
+}

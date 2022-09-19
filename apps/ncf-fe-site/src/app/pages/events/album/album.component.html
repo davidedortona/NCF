@@ -1,0 +1,31 @@
+<div class="gallery" *ngIf="hasImages">
+    <button class="banner-buttonback" (click)="changeBackImagefromButton()"  >
+        <i  class="pi pi-chevron-left" ></i>
+    </button>
+    <div class="main-image">
+        <img [src]="selectedImageUrl" alt="">
+    </div>
+    <div style="overflow: hidden; width:70%; height:100px; justify-content: center; display:flex;margin: 0 auto;">
+    <div class="images" >
+        <ul>
+            <li *ngFor="let imageUrl of images, let ind = index"
+            
+            (click)="changeSelectedImage(ind)"
+            [ngStyle]="{'background-image': 'url(' + imageUrl + ')'}"
+        >
+            
+        </li>
+        </ul>
+        
+    </div>
+</div>
+    <button class="banner-button"  (click)="changeSelectedImagefromButton()">
+        <i  class="pi pi-chevron-right" ></i>
+    </button>
+</div>
+<div style="background-color: black; height: 900px; width:100%;" *ngIf="!hasImages">
+    <div class="noeventsfontdiv">
+        <i class="noeventsfont" style="margin-top:30%;">Le immagini per questo evento non sono state ancora caricate</i>
+       
+    </div>
+    </div>

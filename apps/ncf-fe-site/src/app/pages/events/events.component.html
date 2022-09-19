@@ -1,0 +1,106 @@
+<button class="banner-buttonx" *ngIf="show"  (click)="closeAlbum()">
+    <i  class="pi pi-times" ></i>
+</button>
+<ncf-album *ngIf="show" >
+   
+</ncf-album>
+<div *ngIf="!show">
+<div class="background-category-banner" *ngIf="category && events.length > 0">
+    <div class="categorybanner" *ngIf="!(category['name'] === 'HOMEPAGE')">
+      
+        <div class="grid animate_animated animate__fadeOutLeft" >
+            
+            <!-- div class="banner-image " -->
+                <!-- div class="col-5 offset-1 banner-text animate__animated animate__slideInLeft" -->
+                <div class="offset-1 categorybanner-text animate__animated animate__slideInLeft" >
+                <h1 class="categoryname">{{category['name']}}</h1>
+                <h2  [innerHTML]="category['description']"></h2>
+                   
+               
+               
+                </div>
+                
+                    <img [src]="category['image']" alt=""/>
+       
+                
+            <!-- /div -->
+            
+        </div>
+        
+       
+    </div>
+
+    
+    </div>
+
+
+    
+    <div class="category-item" >
+
+        <div style="width:100%; height:auto; display: flex;
+        flex-wrap: wrap; ">
+            <div class="category-item-wrapper"  *ngFor="let event of events">
+            <div class="bg-transparent"(click)="showGallery(event)"></div>
+           
+                <img (click)="showGallery(event)" [src]="event['image']" alt="" class="eventimage"/>
+                <h4 class="categoryname">{{event['name']}}</h4>
+                <h5 class="catdescription" [innerHTML]="event['description']"> </h5>
+                <!--
+                <button class="catbutton">
+                    <i style="padding-right:8px;font-weight:300; font-style: normal; font-size: 22px;">Scopri</i>
+                    <i  class="pi pi-chevron-right" ></i>
+                </button>
+                 -->
+                
+            </div>
+        </div>
+            
+        
+    
+        
+    
+    </div>
+
+    
+
+    <div class="noevents" *ngIf="events.length < 1"> 
+        <ncf-album *ngIf="show"></ncf-album>
+       
+       
+         <div class="noeventsfontdiv" *ngIf="category">
+            <i class="noeventsfont">Gli eventi per la categoria richiesta non sono ancora stati cariati. Nel frattempo ecco altri eventi che potrebbero interessarti!
+            </i>
+           
+        </div>
+        <div class="category-item" >
+
+            <div style="width:100%; height:auto; display: flex;
+            flex-wrap: wrap; ">
+            <div class="category-item-wrapper"  *ngFor="let evento of allEvents">
+            <div class="bg-transparent" (click)="showGallery(evento)"></div>
+           
+                <img  [src]="evento['image']" alt="" class="eventimage"/>
+                <h4 class="categoryname">{{evento['name']}}</h4>
+                <h5 class="catdescription" [innerHTML]="evento['description']"> </h5>
+                <!--
+                <button class="catbutton">
+                    <i style="padding-right:8px;font-weight:300; font-style: normal; font-size: 22px;">Scopri</i>
+                    <i  class="pi pi-chevron-right" ></i>
+                </button>
+                 -->
+                
+            </div>
+            </div>
+            
+        
+    
+        
+    
+    </div>
+    </div>
+
+    
+    
+</div>
+
+    

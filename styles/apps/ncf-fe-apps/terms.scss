@@ -1,0 +1,48 @@
+.terms{
+    margin-top:100px;
+    background-color: black;
+}
+
+.header{
+    height: 200px;
+    background-color: #181818;
+    
+
+    &-title{
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding-top: 2%;
+    }
+
+    &-sentence{
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding-top: 2%;
+    }
+}
+
+.body{
+    height: 450px;
+    background-color: black;
+    
+
+    &-title{
+        color: white;
+        display: flex;
+        justify-content: left;
+        padding-left: 3%;
+        padding-bottom:2%;
+        padding-top:1%;
+    }
+
+    &-sentence{
+        color: white;
+        display: flex;
+        justify-content: left;
+        padding-left: 3%;
+        padding-bottom:2%;
+        padding-right: 3%;
+    }
+}

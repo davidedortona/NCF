@@ -1,0 +1,137 @@
+<div class="background-category-banner" *ngFor="let category of categories; let i = index">
+<div class="categorybanner" *ngIf="!(category.name === 'HOMEPAGE')">
+  
+    <div class="grid animate_animated animate__fadeOutLeft" >
+        
+        <!-- div class="banner-image " -->
+            <!-- div class="col-5 offset-1 banner-text animate__animated animate__slideInLeft" -->
+            <div class="offset-1 categorybanner-text animate__animated animate__slideInLeft" >
+            <h1 class="categoryname">{{category.name}}</h1>
+            <h2  [innerHTML]="category.description"></h2>
+               
+           
+           
+            </div>
+            
+                <img [src]="category.image" alt=""/>
+   
+            
+        <!-- /div -->
+        <button class="categorybanner-button"  (click)="findMore(category)">
+            
+            <i style="padding-right:8px;font-weight:300; font-style: normal; font-size: 22px;">Scopri di più  </i>
+            <i  class="pi pi-chevron-right" ></i>
+        </button>
+    </div>
+    
+   
+</div>
+</div>
+
+<!--div class="background" >
+    <div class="discover-item" *ngFor="let category of categories; let i = index"  >
+
+        
+            
+        
+        
+        <div class="discover-item-wrapper" *ngIf="i%2===0 && !(category.name === 'HOMEPAGE') && homepage === 'true'">
+            <img class="immagine" [src]="category.image" />
+            <div class="text_container">
+                <h4 class="name">{{category.name}}</h4>
+            <h5 class="description" [innerHTML]="category.description"> 
+    
+            </h5>
+            
+            <p-button
+            styleClass="button_l"
+            >
+            <i style="width:5px;">Scopri</i>
+            <i label="Scopri" class="pi pi-arrow-right" style="margin-left:85%;"></i>
+            
+        </p-button>
+            
+            
+            </div>
+            
+            
+        </div>
+    
+        <div class="discover-item-wrapper_right" *ngIf="i%2===1 && !(category.name === 'HOMEPAGE') && homepage === 'true'">
+           
+            <div class="text_container">
+                <h4 class="name">{{category.name}}</h4>
+            <h5 class="description" [innerHTML]="category.description">
+    
+            </h5>
+            
+                <p-button
+                styleClass="button"
+                >
+                <i style="width:5px;">Scopri</i>
+                <i label="Scopri" class="pi pi-arrow-right" style="margin-left:85%;"></i>
+                
+            </p-button>
+            
+            
+            </div>
+            <img class="immagine" [src]="category.image" />
+            
+        </div>
+    </div>
+
+    
+    
+        </div -->  
+        
+        <!--div class="category-item" *ngIf="homepage === 'false'">
+            <div class="discover-item-wrapper-category" *ngIf="!(category.name === 'HOMEPAGE') && homepage === 'false'" >
+                
+                <div class="text_container">
+                    <h4 class="name">{{category.name}}</h4>
+                <h5 class="description" [innerHTML]="category.description"> 
+        
+                </h5>
+                
+                <p-button
+                styleClass="button_l"
+                >
+                <i style="width:5px;">Scopri</i>
+                <i label="Scopri" class="pi pi-arrow-right" style="margin-left:85%;"></i>
+                
+            </p-button>
+                
+                
+                </div>
+                
+            </div>
+    
+            </div -->
+    
+    
+
+<!-- div class="background-category" *ngIf="homepage === 'false' ">
+    <div class="category item">
+        <div class="discover-item-wrapper-category" *ngIf="!(category.name === 'HOMEPAGE')" >
+            
+            <div class="text_container">
+                <h4 class="name">{{category.name}}</h4>
+            <h5 class="description" [innerHTML]="category.description"> 
+    
+            </h5>
+            
+            <p-button
+            styleClass="button_l"
+            >
+            <i style="width:5px;">Scopri</i>
+            <i label="Scopri" class="pi pi-arrow-right" style="margin-left:85%;"></i>
+            
+        </p-button>
+            
+            
+            </div>
+            
+            
+        </div>
+    </div>
+</div -->

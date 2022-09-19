@@ -1,0 +1,28 @@
+<div class="banner" >
+  
+    <div class="animate_animated animate__fadeOutLeft">
+        
+        <!-- div class="banner-image " -->
+            <!-- div class="col-5 offset-1 banner-text animate__animated animate__slideInLeft" -->
+            <div class="offset-1 banner-text animate__animated animate__slideInLeft" >
+            <h1 style="bannertitle" *ngIf="banners[currentIndex]?.isHomeBanner === 'true'">{{banners[currentIndex].name}}</h1>
+            <h2 *ngIf="!(banners[currentIndex]?.richDescription === 'null') && banners[currentIndex]?.isHomeBanner === 'true'" [innerHTML]="banners[currentIndex].richDescription"></h2>
+               
+            <h2 style="margin-top: 400px;" *ngIf="banners[currentIndex]?.isHomeBanner === 'true'">{{ banners[currentIndex].tags }}</h2>
+           
+            </div>
+            <div    class="offset-5 banner-text animate__animated animate__slideInLeft" style="margin-top:20%;">
+            <h1 *ngIf="banners[currentIndex]?.isHomeBanner === 'false'" style="margin-left:-10%;">{{banners[currentIndex].name}}</h1>
+            </div>
+                <img class="animate__animated animate__slideInLeft" [src]="banners[currentIndex]?.image" alt=""/>
+   
+            
+        <!-- /div -->
+        <button class="banner-button" (click)="changeBanner(currentIndex)"  >
+            <i  class="pi pi-chevron-right" ></i>
+        </button>
+    </div>
+    
+   
+</div>
+    
